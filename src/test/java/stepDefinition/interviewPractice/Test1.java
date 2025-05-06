@@ -18,5 +18,18 @@ public class Test1 {
                 .header("Autheication","123")
                 .body("key", equalTo("data"));
 
+
+    }
+
+    @Test
+    public void extractResponse(){
+        Response response = given().header("","")
+                .contentType(ContentType.JSON)
+                .body("")
+                .when().post("/").then()
+                .statusCode(200).extract().response();
+
+        response.jsonPath().get("data");
+        response.jsonPath().getString("");
     }
 }
