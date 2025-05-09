@@ -32,4 +32,5 @@ public class Test1 {
         response.jsonPath().get("data");
         response.jsonPath().getString("");
     }
+
 }
