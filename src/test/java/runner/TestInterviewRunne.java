@@ -8,5 +8,5 @@ import io.cucumber.junit.CucumberOptions;
         glue = "write the path of stepdef",
         plugin = {"pretty", "json"}
 )
-public class TestInterviewRunne  {
+public class TestInterviewRunne{
 }
