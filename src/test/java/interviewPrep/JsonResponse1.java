@@ -14,4 +14,17 @@ public class JsonResponse1 {
         String name = js.get("user.name");
         Assert.assertEquals(name, "Saumya", "The name is not same");
     }
+
+    @Test
+    public void validateJsonResponse3(){
+        String response = Payload1.payload4;
+        JsonPath js  = new JsonPath(response);
+        int accountSize = js.get("accounting.size()");
+        int salesSize = js.get("sales.size()");
+
+        for(int i=0;i<accountSize;i++){
+            System.out.println(js.getString("accounting["+i+"].firstName"));
+        }
+
+    }
 }
