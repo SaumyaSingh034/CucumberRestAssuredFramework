@@ -11,6 +11,7 @@ public class JsonResponse1 {
     public void validateJsonResponse(){
         String response = Payload1.payload3;
         JsonPath js  = new JsonPath(response);
+        JsonPath js1  = new JsonPath(response);
         String name = js.get("user.name");
         Assert.assertEquals(name, "Saumya", "The name is not same");
     }
